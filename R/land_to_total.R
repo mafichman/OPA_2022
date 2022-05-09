@@ -24,7 +24,7 @@ properties %>%
   mutate(land_to_value = taxable_land / market_value) %>% 
   dplyr::select(land_to_value, zoning) %>%
   ggplot()+ 
-  geom_histogram(aes(land_to_value), binwidth = 0.05, alpha = 0.7, fill = "blue")+
+  geom_histogram(aes(land_to_value), binwidth = 0.02, alpha = 0.7, fill = "blue")+
   facet_wrap(~zoning, scales = "free_y")+
   labs(title="Ratio of Taxable Land to Total Assessment - RSA Properties - 2022 Phila. OPA Assessments",
        subtitle = "Data: Philadelphia OPA, 5/9/2022. n = 542,272. Excludes Tax Exempt Land (n = 38,540)\nAnalysis by Michael Fichman, PennPraxis / Weitzman School of Design - mfichman@upenn.edu",
